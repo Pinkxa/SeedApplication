@@ -1,0 +1,32 @@
+<div id = "pretty">
+  <h2>Users</h2>
+    <table border = "2">
+      <thead>
+          <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>CategoryName</th>      
+          </tr>
+      </thead>
+
+      <tbody>
+        {{#users}}
+          <tr>
+            <td><h5>{{Username}}</h5></td>
+            <td><h5>{{Password}}</h5></td>
+            <td><h5>{{category_Id}}</h5></td>
+          </tr> 
+        {{/users}}
+      </tbody>
+    </table>
+
+  <div id="add">
+  	<h4>Add a user</h4>
+    	<form action="users/add" method="POST">
+    		Username: <input type="text" name="username">
+    		Password: <input type="password" name="password">
+    		Category: <input type="text" name="category">  
+        <input type="submit">
+    	</form>
+  </div>
+</div>

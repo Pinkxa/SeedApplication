@@ -1,0 +1,19 @@
+<section id="license" class="license section">
+    <div class="container">
+        <h1>Add Job Post</h1>
+
+        <form class="" action="/posts/add" method="post">
+        
+
+        <div class="row">
+            <div class="six columns">
+                <label for="post">Post</label>
+                <input type="text" name="post" value = {{post.Post}}> <br />
+                Description : <br />
+                <textarea rows="5" cols="50" name="description">{{post.Description}}</textarea>
+            </div>
+        </div>
+        <input class="button-primary" type="submit" value="Submit">
+        </form>
+    </div>
+</section>

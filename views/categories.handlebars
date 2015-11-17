@@ -1,0 +1,30 @@
+<div id = "pretty">
+    <h2>Categories</h2>
+      <table border = "2">
+       <thead>
+          <tr>
+            <th>CategoryName</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#categories}}
+            <tr>
+              <td><h5>{{catname}}</h5></td>
+              <td><button type="button" class="btn btn-default"><a href="/categories/edit/{{id}}">Edit</a></button></td>
+              <td><button type="button" class="btn btn-default"><a href="/categories/delete/{{id}}">Delete</a></button></td>
+            </tr>
+          {{/categories}}
+        </tbody>
+      </table>
+
+  <div id="add">
+      	
+    <h4>Add a category</h4>
+      <form action="categories/add" method="POST">
+      		Name: <input type="text" name="catname">	
+      		<input type="submit">
+      </form>
+  </div>
+</div>

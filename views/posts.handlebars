@@ -1,0 +1,36 @@
+<div class ="container">
+
+<h1>Job Posts</h1>
+
+<a href="/posts/showAdd/">Add Job Post</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>
+                Post
+            </th>
+            <th>
+                CategoryName
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#posts}}
+        <tr>
+            <td>
+                {{Post}}
+                {{categoryName}}
+            </td>
+            <td>
+                <a href="/posts/{{Id}}">Edit</a>
+                <a href="/posts/delete/{{Id}}">Delete</a>
+            </td>
+        </tr>
+        {{/posts}}
+    </tbody>
+</table>
+</div>
